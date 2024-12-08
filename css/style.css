@@ -1,6 +1,6 @@
 :root {
-    --primary: #FEA116; /* Highlight color */
-    --light: #FFFFFF; /* Pure white for better contrast */
+    --primary: #D17C15; /* Adjusted for better contrast */
+    --light: #FFFFFF; /* Pure white for readability */
     --dark: #0F172B; /* Dark background color */
 }
 
@@ -48,7 +48,13 @@
 
 .btn.btn-primary,
 .btn.btn-secondary {
-    color: var(--light); /* Updated to pure white for better contrast */
+    color: var(--light);
+    background-color: var(--primary); /* Adjusted to meet contrast ratio */
+}
+
+.btn.btn-primary:hover,
+.btn.btn-secondary:hover {
+    background-color: #B5670F; /* Slightly darker hover for better visibility */
 }
 
 .btn-square {
@@ -83,7 +89,7 @@
     margin-left: 25px;
     padding: 35px 0;
     font-size: 15px;
-    color: var(--light) !important; /* Ensure readability */
+    color: var(--light) !important;
     text-transform: uppercase;
     font-weight: 500;
     outline: none;
@@ -164,14 +170,14 @@
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-    color: rgba(255, 255, 255, .8); /* Adjust opacity for better contrast */
+    color: rgba(255, 255, 255, .8);
 }
 
 /*** Section Title ***/
 .section-title {
     position: relative;
     display: inline-block;
-    color: var(--dark); /* Update for high readability */
+    color: var(--dark);
 }
 
 .section-title::before {
@@ -201,94 +207,6 @@
     display: none;
 }
 
-/*** Service ***/
-.service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    transition: .5s;
-}
-
-.service-item:hover {
-    background: var(--primary);
-}
-
-.service-item * {
-    transition: .5s;
-}
-
-.service-item:hover * {
-    color: var(--light) !important; /* Ensure contrast on hover */
-}
-
-/*** Food Menu ***/
-.nav-pills .nav-item .active {
-    border-bottom: 2px solid var(--primary);
-}
-
-/*** Youtube Video ***/
-.video {
-    position: relative;
-    height: 100%;
-    min-height: 500px;
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/video.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.video .btn-play {
-    position: absolute;
-    z-index: 3;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    box-sizing: content-box;
-    display: block;
-    width: 32px;
-    height: 44px;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    padding: 18px 20px 18px 28px;
-}
-
-.video .btn-play:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 100px;
-    height: 100px;
-    background: rgba(254, 161, 22, .9); /* Increase opacity */
-    border-radius: 50%;
-    animation: pulse-border 1500ms ease-out infinite;
-}
-
-.video .btn-play span {
-    display: block;
-    position: relative;
-    z-index: 3;
-    width: 0;
-    height: 0;
-    border-left: 32px solid var(--light); /* White for better visibility */
-    border-top: 22px solid transparent;
-    border-bottom: 22px solid transparent;
-}
-
-@keyframes pulse-border {
-    0% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-        opacity: 0;
-    }
-}
-
 /*** Footer ***/
 .footer .btn.btn-social {
     margin-right: 5px;
@@ -298,7 +216,7 @@
     align-items: center;
     justify-content: center;
     color: var(--light);
-    border: 1px solid var(--light); /* Pure white border for contrast */
+    border: 1px solid var(--light);
     border-radius: 35px;
     transition: .3s;
 }
@@ -312,7 +230,7 @@
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: var(--light); /* Pure white for readability */
+    color: var(--light);
     font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
